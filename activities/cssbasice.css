@@ -1,0 +1,15 @@
+main p {
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: smaller;
+}
+
+
+
+footer p {
+    color: blue;
+    font-family: 'Courier New', Courier, monospace; 
+        
+
+}
