@@ -1,0 +1,22 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #000;
+    background-image: url('BackgroundPlace.webp');
+
+    }
+    
+    
+    nav a {
+        color: chartreuse;
+    }
+    
+    .current{
+        color: #000;
+    }
+
+
+      ul li {
+        list-style: none;
+        list-style-image: url("bulletpoint.png");
+      }
