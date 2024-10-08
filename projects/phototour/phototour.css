@@ -6,7 +6,12 @@ body{
 
     }
     
-    
+    main.index{
+        background-image:  url("indianflag.png");
+        background-size: 300px 200px;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
     nav a {
         color: chartreuse;
     }
