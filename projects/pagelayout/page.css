@@ -2,26 +2,23 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     background-color: brown;
-    
+    padding: 20px;
 
 }
-
+.container {
+    background-color: rgb(58, 27, 8);
+    padding: 20px;
+}
 header {
     width: 70%;
-    background-color: blue;
-    margin: 30px auto;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); 
-    background-size: cover; 
-    background-origin: padding-box; 
-    background-clip: border-box; 
-    background-image: url(mahal.jpg); 
-    background-size: 50px;
-    background-repeat: no-repeat;
-    background-position: right;
-}
-
-header h1 {
-    border: 3px solid greenyellow;
+    color: white;
+    background-color:rgb(42, 23, 140);
+    margin: 20px auto;
+    box-shadow: 2px 6px 6px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 50px;
+    border-radius: 10px;
 }
 
 #wrapper {
@@ -29,83 +26,65 @@ header h1 {
     max-width: 900px;
     margin: 0 auto;
     border: thin solid black;
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5); 
+    box-shadow: 4px 4px 4px;
     padding: 20px;
-    height: 400px;
+    height: 80vh;
+
 }
 
-nav {
-    width: 500px;
+.navContainer {
+    width: 100%;
     margin: 0 auto;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    display: inline;
-    margin: 0;
-    padding: 0;
-}
-
-nav a {
-    display: block;
-    padding: 10px 30px;
-    background-color: blue;
     color: white;
-    margin-right: 10px; 
-    border-bottom: thin solid white;
-    float: left;
-    border: 5px solid yellow;
-    border-radius: 50px; 
-    
+    text-align: center;
+    text-transform: uppercase
+}
+
+.navContainer ul {
+    color: white;
+}
+
+.navContainer ul a {
+    display: inline-block;
+    background-color: brown ;
+    margin: 10px;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.navContainer a:hover {
+    background-color: green;
 }
 
 figure{
+    margin-top: 50px;
     float:right;
+    color: white;
+    font-style: italic;
+}
+main {
+    float: left;
 }
 img{
     height: 200px;
-    float:right;
+}
+.content {
+    width: 60%;
+    padding: 20px;
+}
+.content h1 {
+    color: white;
 }
 
-nav a:hover {
-    color: blue;
-    background-color: white;
-}
-
-#first {
-    width: 250px;
-    border: thin solid black;
-    float: left;
-}
-
-#first img {
-    width: 250px;
-    height: 300px;
-}
-
-.clear {
-    clear: both;
-}
-
-.second {
-    font-style: italic;
-}
-
-.third {
-    text-transform: capitalize;
-    line-height: 80px;
-    text-align: center;
+.content p {
+    line-height: 20px;
+    font-size: 15px;
 }
 
 footer {
     color: white;
     font-weight: bolder;
-    background: url(pic.jpg) right no-repeat;
     text-align: center;
     
 }
