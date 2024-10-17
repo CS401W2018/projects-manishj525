@@ -1,0 +1,32 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container{
+    background-color: brown;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+         "header header header"
+         "lside main rside"
+         "footer footer footer";
+}
+
+.item {
+    background-color: lightblue;
+    border: thin solid #000;
+}
+
+.itemA {
+    grid-area: side;
+}
+
+
+.itemB {
+    grid-area: rside;
+}
+
+.itemc {
+    grid-area: main;
+}
