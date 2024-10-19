@@ -1,0 +1,18 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    gap: 5px;
+    justify-content: space-around;
+}
+
+.item {
+    background-color: cadetblue;
+    padding: 10px 5px;
+    width: 50px
+}
