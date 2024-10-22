@@ -1,0 +1,50 @@
+body{ 
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+header{
+    background-color: rgb(175, 235, 215);
+}
+
+.container{
+    display: flex;
+    margin: 20px;
+}
+
+aside {
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 25%;
+    margin-right: 20px;
+  }
+
+  main {
+    display: flex; 
+  }
+
+  .hello{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+  }
+
+  nav{
+    display: flex;
+  }
+
+  nav a{
+    margin: 5px;
+  }
+  .profileCards{
+    display: grid ;
+    grid-template-columns: auto auto auto auto;
+
+
+  }
+  .card{
+    margin: 25px;
+  }
+
+
+nav{
+    background-color: rgb(243, 195, 195);
+}
