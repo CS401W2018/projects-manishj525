@@ -5,7 +5,7 @@ body {
 
 header {
     background-color: rgb(77, 77, 135);
-    color: #FFF;
+    color: #550f0f;
 }
 
 header h1 {
@@ -18,12 +18,17 @@ header h1 {
 nav a {
     display: block;
     padding: 5px 10px;
-    color: #FFF;
+    color: #0d0101;
     text-decoration: none;
 }
 
 nav a:hover {
     text-decoration: underline;
+}
+
+nav{ 
+    background-color: #a06060;
+    
 }
 
 .row {
@@ -41,4 +46,21 @@ nav a:hover {
 
 .card img {
     width: 100%;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    border: thin solid#FFF;
+  }
+
+  .card {
+    width: 100%;
+    margin: 10px;
+  }
 }
