@@ -1,0 +1,16 @@
+.schedule {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+
+.schedule thead, .schedule tfoot{
+    background-color: rgb(142, 142, 201);
+    color: white;
+}
+
+.schedule tbody tr:nth-child(odd) {
+    background-color: #ccc;
+}
+
+
