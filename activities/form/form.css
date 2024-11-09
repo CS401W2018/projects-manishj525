@@ -1,3 +1,57 @@
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
+
+fieldset {
+    box-shadow: 3px 3px 3px rgba(20, 20, 20, 20);
+    background: aquamarine;
+}
+
+legend {
+    border: thin solid #000;
+    background-color: blue;
+    padding: 5px;
+    color: white;
+    
+}
+
+.form-row input{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #ddd;
+}
+
+.form-row input:focus {
+    background-color: #fff;
+}
+
+.form-row {
+    display: flex;
+    gap: 150px;
+    margin-top: 10px;
+}
+
+.form-row label {
+    width: 15px;
+    text-align: right;
+}
+
+.check-row {
+    display: flex;
+    gap: 10px;
+}
+
+.spacer {
+    width: 150px;
+    text-align: right;
+}
+
+@media only screen and (max-widrh: 600px) {
+    .form-row{
+        flex-direction: column;
+    }
+
+    .form-row{
+        text-align: left;
+    }
+}

@@ -11,29 +11,57 @@
         <h1>form Information</h1>
     </header>
     <main>
-       <form action="processing.html"    method="get"><br>
-        <br>
-        First Name: <input type="text"   name="first" value="manish" required="required"><br>
-        <br>
-        Last Name: <input type="text"    name="last" placeholder="Last Name"><br>
-        <br>
-        Password: <input type="password" name="pass"><br>
-        <br>
-        <input type="checkbox" name="rember" checked>Remember me<br>
-        Grade:
-        <input type="radio" name="grade" value="freshman"> Freshman<br>
-        <input type="radio" name="grade" value="sophmore"> Sophmore<br>
-        <input type="radio" name="grade" value="Junior"> Junior<br>
-        <input type="radio" name="grade" value="Senior"> Senior<br>
-        
-        <input type="Submit"><br>
-       </form>
+       <form action="processing.html"    method="get">
+            <fieldset>
+                <legend>Sign Up</legend>
+                <div class="form-row">
+                    <label for="fname">First Name:</label>
+                    <input id=" fname" type="text" name="first" value="manish" required>
+                </div>
+                <div class="form-row">
+                    <label for="Iname">Last Name</label>
+                    <input type="text" id="Iname" name="last" placeholder="Last Name">
+                </div>
+               <div class="form-row">
+                    <label for="pass">Password</label>
+                    <input type="password" name="pass" id="pass">
+                </div>
+                <div class="check-row">
+                    <div class="spacer"></div>
+                   <label>
+                        <input type="checkbox" name="remember" checked>
+                        Remember me
+                    </label>
+                </div>
+                <div class="form-row">
+                    <label for="State">State</label>
+                    <select name="state" id="state">
+                        <option value="blank"></option>
+                        <option value="CA">California</option>
+                        <option value="IH">Hawaii</option>
+                        <option value="UT">Utah</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="comments">comments</label>
+                    <textarea name="comments" id="comments"></textarea>
+                <div>
+                    <div class="check-row">
+                        <div class="spacer">Class:</div>
+                        <label></label><input type="radio" name="Class" value="freshman"> Freshman</label>
+                        <label></label><input type="radio" name="Class" value="sophmore"> Sophmore</label>
+                    </div>
+                    <div class="form-row">
+                        <div class="spacer"></div>
+                        <input type="Submit">
+                    </div>
+                </fieldset>
+            </form>
        <h4> 1.The form tag has an "action" attribute. What does it do?</h4>
-       <p>The browser knows where to send the form data by the action property in a form tag.</p>
-       <h4> 2. The form tag has a "method" attribute. What does it do?</h4>
-       <p>How the data is sent is specified by the method property, which can be either "POST" or "GET."</p>
-       <h4> 3. GET sends data visibly in the URL and is used for simple requests.</h4>
-       <p>POST is used for safe data transfer and is invisible. GET is used for basic requests and sends data that is visible in the URL.</p>
+       <p> 1. Grid: Organizes fields in rows/columns. 2. Flexbox: Aligns items in a row/column, great for responsiveness. 3. Padding/Margins: Adds space for clarity. 4. Borders/Shadows: Highlights fields.</p>
+       <h4> 2.Why does the professor like to use flex?</h4>
+       <p>Flex is often used by professors because it makes flexible element position and spacing simple and adjusts well to different screen sizes with little effort.</p>
+
     </main>
     
 
