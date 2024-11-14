@@ -11,12 +11,12 @@
         <h1>form Information</h1>
     </header>
     <main>
-       <form action="processing.html"    method="get">
+       <form action="processing.html"    method="post" id="myForm">
             <fieldset>
                 <legend>Sign Up</legend>
                 <div class="form-row">
                     <label for="fname">First Name:</label>
-                    <input id=" fname" type="text" name="first" value="manish" required>
+                    <input id="firstName" type="text" name="first" value="manish" required>
                 </div>
                 <div class="form-row">
                     <label for="Iname">Last Name</label>
@@ -57,10 +57,14 @@
                     </div>
                 </fieldset>
             </form>
-       <h4> 1.The form tag has an "action" attribute. What does it do?</h4>
-       <p> 1. Grid: Organizes fields in rows/columns. 2. Flexbox: Aligns items in a row/column, great for responsiveness. 3. Padding/Margins: Adds space for clarity. 4. Borders/Shadows: Highlights fields.</p>
-       <h4> 2.Why does the professor like to use flex?</h4>
-       <p>Flex is often used by professors because it makes flexible element position and spacing simple and adjusts well to different screen sizes with little effort.</p>
+       <h4> 1.What is JavaScript? How did it get its name?</h4>
+       <p>A programming language that adds interactivity to websites like buttons and animations. its Originally callded Mocha it was renamed JavaScript by Netscape to align with jave, which was popular at the time, even though they are not closely related.</p>
+       <h4>2. What are the two ways you can run JavaScript?</h4>
+       <p>1. In the Browser: Directly on web pages most common way. 2. On the Server: Using tools like Node.js to run JavaScript outside a browser.</p>
+       <h4>3. What was the most popular front-end js library?</h4>
+       <p>jQuery: Made it easier to work with JavaScript across browsers.</p>
+       <h4>4. What is the most popular front-end js library today?</h4>
+       <p>React: Used to create fast, interactive web applications.</p>
 
     </main>
     
@@ -68,6 +72,20 @@
 
     <footer>
         <p>&copy; 2024 Manish Jurial</p>
-    </footer>   
+    </footer> 
+    <script>
+        document.getElementById('myForm').addEventListener('submit',function(event){
+            event.preventDefault();
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const formDate = {
+                firstName: firstName,
+                lastName: lastName,
+                age: age
+            }
+
+        })
+
+    </script>
 </body>
 </html>
