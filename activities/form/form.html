@@ -3,89 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>from</title>
-    <link rel="stylesheet" href="form.css">
+    <title>Form</title>
+    <link rel="stylesheet" href="Form.css">
 </head>
 <body>
     <header>
-        <h1>form Information</h1>
+        <h1>Form Information</h1>
     </header>
     <main>
-       <form action="processing.html"    method="post" id="myForm">
+        <div id="message"></div>
+        <form id="myForm">
             <fieldset>
                 <legend>Sign Up</legend>
-                <div class="form-row">
-                    <label for="fname">First Name:</label>
-                    <input id="firstName" type="text" name="first" value="manish" required>
+                <div class="Form-row">
+                    <label for="firstName">First Name:</label>
+                    <input id="firstName" type="text" name="firstName" value="Manish" required>
                 </div>
                 <div class="form-row">
-                    <label for="Iname">Last Name</label>
-                    <input type="text" id="Iname" name="last" placeholder="Last Name">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name">
                 </div>
-               <div class="form-row">
-                    <label for="pass">Password</label>
-                    <input type="password" name="pass" id="pass">
+                <div class="form-row">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <div class="form-row">
+                    <label for="age">Age:</label>
+                    <input id="age" type="number" name="age" placeholder="Enter your age">
                 </div>
                 <div class="check-row">
-                    <div class="spacer"></div>
-                   <label>
+
+                    <label>
                         <input type="checkbox" name="remember" checked>
                         Remember me
                     </label>
                 </div>
                 <div class="form-row">
-                    <label for="State">State</label>
+                    <label for="state">State:</label>
                     <select name="state" id="state">
-                        <option value="blank"></option>
+                        <option value="" disabled selected>Select your state</option>
                         <option value="CA">California</option>
-                        <option value="IH">Hawaii</option>
+                        <option value="HI">Hawaii</option>
                         <option value="UT">Utah</option>
                     </select>
                 </div>
                 <div class="form-row">
-                    <label for="comments">comments</label>
+                    <label for="comments">Comments:</label>
                     <textarea name="comments" id="comments"></textarea>
-                <div>
-                    <div class="check-row">
-                        <div class="spacer">Class:</div>
-                        <label></label><input type="radio" name="Class" value="freshman"> Freshman</label>
-                        <label></label><input type="radio" name="Class" value="sophmore"> Sophmore</label>
-                    </div>
-                    <div class="form-row">
-                        <div class="spacer"></div>
-                        <input type="Submit">
-                    </div>
-                </fieldset>
-            </form>
-       <h4> 1.What is JavaScript? How did it get its name?</h4>
-       <p>A programming language that adds interactivity to websites like buttons and animations. its Originally callded Mocha it was renamed JavaScript by Netscape to align with jave, which was popular at the time, even though they are not closely related.</p>
-       <h4>2. What are the two ways you can run JavaScript?</h4>
-       <p>1. In the Browser: Directly on web pages most common way. 2. On the Server: Using tools like Node.js to run JavaScript outside a browser.</p>
-       <h4>3. What was the most popular front-end js library?</h4>
-       <p>jQuery: Made it easier to work with JavaScript across browsers.</p>
-       <h4>4. What is the most popular front-end js library today?</h4>
-       <p>React: Used to create fast, interactive web applications.</p>
-
-    </main>
-    
-
-
-    <footer>
+                </div>
+                <div class="check-row">
+                    <div class="spacer">Class:</div>
+                    <label><input type="radio" name="class" value="freshman"> Freshman</label>
+                    <label><input type="radio" name="class" value="sophomore"> Sophomore</label>
+                </div>
+                <div class="form-row">
+                    <input type="submit" value="Submit">
+                </div>
+            </fieldset>
+             </form>
+            </main>
+        <footer>
+            <h4>1. what is AJAX?</h4>
+            <p>AJAX help you to make change on specific section of a webpage without having to reload the entire page. It allows background infomation access and transfer from web pages to a server. </p>
+            <h4>2. Why for you put your JS Code in a separate file?</h4>
+            <p>JaveScript is keeps things organized and simple by being in a separate files. It makes the HTML shorter and allows you apply the code on differnt pages.</p>
         <p>&copy; 2024 Manish Jurial</p>
     </footer> 
-    <script>
-        document.getElementById('myForm').addEventListener('submit',function(event){
+        <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            const firstName = document.getElementById('firstName').value;
-            const lastName = document.getElementById('lastName').value;
-            const formDate = {
-                firstName: firstName,
-                lastName: lastName,
-                age: age
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const age = parseInt(document.getElementById('age').value, 18);
+
+            if (!firstName || !lastName) {
+                alert('First Name and Last Name cannot be blank.');
+                return;
             }
 
-        })
+            if (!age || age < 18) {
+                alert('You must be 18 years or older to submit this form.');
+                return;
+            }
 
+            const formData = {
+                firstName: firstName,
+                lastName: lastName,
+                password: document.getElementById('password').value,
+                remember: document.getElementById('remember').checked,
+                state: document.getElementById('state').value,
+                class: document.querySelector('input[name="class"]:checked')? document.querySelector('input[name="class"]:checked').value: null
+            };
+
+            console.log(formData);
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', '/submit.json', true);
+            xhr.setRequestHeader('Content-Type', "application/json; charset=UTF-8");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    alert('Form submitted successfully.');
+                } else if (xhr.readyState === 4) {
+                    alert('Error submitting form.');
+                }
+            };
+
+            xhr.send(JSON.stringify(formData));
+            alert(`Success: ${firstName} ${lastName}`);
+        });
     </script>
 </body>
 </html>
