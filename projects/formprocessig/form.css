@@ -1,0 +1,97 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #364636;
+    color: rgb(243, 228, 228);
+    text-align: center;
+    padding: 1em;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+form {
+    max-width: 600px;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+fieldset {
+    border: 2px solid #1d3d20;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: rgb(136, 36, 36);
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+label {
+    width: 120px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #301717;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 15px;
+}
+
+button {
+    padding: 10px 10px;
+    font-size: 1em;
+    color: rgb(250, 249, 249);
+    background-color: #446145;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+@media (max-width: 600px) {
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 2em;
+    }
+}

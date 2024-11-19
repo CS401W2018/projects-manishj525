@@ -1,7 +1,7 @@
 document.getElementById('myForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    const firstName = document.getElementById('firstName').value.trim();
-    const lastName = document.getElementById('lastName').value.trim();
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
     const age = parseInt(document.getElementById('age').value, 10);
     if (!firstName || !lastName) {
         alert('First Name and Last Name cannot be blank.');

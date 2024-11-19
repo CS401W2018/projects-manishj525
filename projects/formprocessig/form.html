@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header>
+        <h1>Form Information</h1>
+    </header>
+    <main>
+        <div id="message"></div>
+        <form action="processing.html" method="post" id="myform">
+            <fieldset>
+                <legend>Sign Up</legend>
+                <div class="form-row">
+                    <label for="firstName">First Name:</label>
+                    <input id="firstName" type="text" name="firstName" required>
+                </div>
+                <div class="form-row">
+                    <label for="lastName">Last Name:</label>
+                    <input id="lastName" type="text" name="lastName" required>
+                </div>
+                <div class="form-row">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-row">
+                    <label for="age">Age:</label>
+                    <input id="age" type="number" name="age" placeholder="Enter your age" required>
+                </div>
+                <div class="form-row">
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments"></textarea>
+                </div>
+                <div class="form-row">
+                    <input type="submit" value="Submit">
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Manish Jurial</p>
+    </footer>
+    <script src="form.js"></script>
+</body>
+</html>
