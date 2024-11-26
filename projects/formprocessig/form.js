@@ -5,6 +5,7 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
     const lastName = document.getElementById("lastName").value;
     const age = parseInt(document.getElementById("age").value, 10);
     const comments = document.getElementById("comments").value;
+    const password  = document.getElementById("password").value;
 
     if (!firstName || !lastName) {
         alert("First Name and Last Name are required.");
@@ -21,7 +22,7 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
         lastName,
         age,
         comments,
-        Password,
+        password
     };
 
     const xhr = new XMLHttpRequest();
@@ -40,6 +41,6 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
         }
     };
 
-    xhr.send(JSON.stringify(Data));
-    console.log(Data);
+    xhr.send(JSON.stringify(formData));
+    console.log(formData);
 });
