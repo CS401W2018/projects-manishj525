@@ -64,6 +64,68 @@ caption {
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
+
+form {
+    max-width: 600px;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+fieldset {
+    border: 2px solid #1d3d20;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: rgb(136, 36, 36);
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+label {
+    width: 120px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #301717;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 15px;
+}
+
+button {
+    padding: 10px 10px;
+    font-size: 1em;
+    color: rgb(250, 249, 249);
+    background-color: #446145;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
 @media (max-width: 400px) {
     th, td {
         font-size: 10px;
@@ -82,3 +144,4 @@ caption {
         text-align: center;
     }
 }
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form Page</title>
+    <link rel="stylesheet" href="update.css">
+</head>
+<body>
+        <header>
+            <h2>form Page</h2>
+        <nav>
+            <ul>
+                <li><a href="/projects-manishj525/projects/finalupdate/update1.html" >Home</a></li>
+                <li><a href="/projects-manishj525/projects/finalupdate/Plan.html">Fitness Plan</a></li>
+                <li><a href="/projects-manishj525/projects/finalupdate/Benefit.html">Benefit</a></li>
+                <li><a href="/projects-manishj525/projects/finalupdate/Result.html">Result</a>
+                <li><a href="/projects-manishj525/projects/finalupdate/" class="active">FormPage</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="processing.html" method="post" id="myForm">
+            <fieldset>
+                <legend>Sign Up</legend>
+                <div class="form-row">
+                    <label for="firstName">First Name:</label>
+                    <input id="firstName" type="text" name="firstName" required>
+                </div>
+                <div class="form-row">
+                    <label for="lastName">Last Name:</label>
+                    <input id="lastName" type="text" name="lastName" required>
+                </div>
+                <div class="form-row">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-row">
+                    <label for="age">Age:</label>
+                    <input id="age" type="number" name="age" placeholder="Enter your age" required>
+                </div>
+                <div class="form-row">
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments"></textarea>
+                </div>
+                <div class="form-row">
+                    <input type="submit" value="Submit">
+                </div>
+            </fieldset>
+        </form>
+        <div id="message"></div>
+</main>
+<footer>
+    <p>&copy;2024 Manish Jurial </p>     
+</footer>  
+<script src="form.js"></script>
+    
+</body>
+</html>
